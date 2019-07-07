@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>web_register</title>
+</head>
+
+<body>
+	
+<div id="register_box">
+    <form>
+        <label>User Name:<input name="user_name" id="name" oninput="inputvali()" type="text" maxlength="20" value="" placeholder="User Name"></label>
+        <label>E-mail:<input name="email" id="email" oninput="inputvali()" type="email" maxlength="20"></label>
+        <label>Password:<input name="pwd1" id="pwd1" oninput="inputvali()" type="password" maxlength="20"></label>
+        <label>Renter Password<input name="pwd2" id="pwd2" oninput="inputvali()" type="password" maxlength="20"></label>
+    </form>
+</div>
+
+<script type="text/javascript">
+        //form validation
+        var user_name = document.getElementById('name');
+        var email = document.getElementById('email');
+        var pwd1 = document.getElementById('pwd1');
+        var pwd2 = Document.getElementById('pwd2');
+        var submitb = document.querySelector('');
+        
+        function inputvali() {
+            if (user_name.value.trim() !== '' && ){
+                button.style.backgroundColor = '';
+                button.disabled = false;
+            }else if (pwd1 == pwd2){
+                'Please enter same password'
+                
+                }else if (!/\S+@\S+\.\S+/.test(email.value)){
+                    
+                }
+            else {
+                button.style.backgroundColor = '';
+                button.disabled = true;
+            }
+            
+        }
+</script>
+</body>
+</html>

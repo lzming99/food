@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>user_basic_info</title>
+</head>
+
+<body>
+	<!-- This is the form for user info, no header for this page -->
+	<form action="" method="post">
+			<lable for="name">Name:<input type="text" id="name_of_user" name="name_of_user" required="ture" maxlength="10" ></lable>
+			<label for="birthday">Birthday:<input type="date" id="user_birthday" name="birthday" required="ture"></label>
+			<label for="Gender">Gender:
+				<select name="gender">
+					<option>Male</option>
+					<option>Female</option>
+				</select>
+			</label>
+			<label for="Height">Height:
+				<select id="length_unit" oninput="heightconverter">
+					<option value="m">meters</option>
+					<option value="ft">feet</option>
+				</select>
+				<input name="height" id="height_input" type="number" maxlength="3">
+			</label>
+			<label for="weight">Weight
+				<select id="weight_unit">
+					<option value="kg">Kg</option>
+					<option value="lb">lb</option>
+				</select>
+				<input name="weight_input" type="number" maxlength="3">
+			</label>
+			<label for="Period">How long do you go to market? 
+				<input name="period" type="number" maxlength="2">
+				(In days)
+			</label>
+	</form>
+
+		<button class="register_button" type="submit"><a href="user_home.html">Go to my home</a></button>
+<script type="text/javascript"> //converting height and weight units 
+    var inputheight = document.getElementById('height_input');
+    var inputweight = document.getElementById('weight_input');
+    var heightunit = document.getElementById('length_unit');
+    var weightunit = document.getElementById('weight_unit');
+    var heightout =;
+    var weightout =;
+    
+    function heightcvt() {
+        if (== meter){
+            heightout = inputheight;
+        }
+        else (== feet){
+            heightout =feet * 0.3048 +inch * 0.0254; // 1 inch = 0.0254 m // 1 ft = 0.3048 m 
+            
+        }
+    }
+    
+    function weightcvt() {
+        if (== kg) {
+            weightout = inputweight;
+        }
+        else {
+            weightout = inputweight*0.45359237;
+        }
+        
+    }
+
+    // for form validation 
+    var period=;
+    function vali() {
+        
+    }
+    
+</script>
+    
+</body>
+</html>
